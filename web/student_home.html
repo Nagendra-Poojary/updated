@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Portal - Leave Management</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>🎓 Student Leave Portal</h1>
+
+  <div class="leave-form">
+    <h2>Apply for Leave</h2>
+
+    <label for="reason">Reason for Leave:</label>
+    <input type="text" id="reason" placeholder="Enter reason">
+
+    <!-- Faculty Select Dropdown -->
+    <label for="facultySelect">Select Faculty:</label>
+    <select id="facultySelect"></select>
+
+    <label for="days">Number of Days:</label>
+    <input type="number" id="days" min="1">
+
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate">
+
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate">
+
+    <button onclick="applyLeave()">📩 Submit Leave Request</button>
+    <p id="statusMsg"></p>
+  </div>
+
+  <div class="leave-history">
+    <h2>📜 Your Leave History</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Reason</th>
+          <th>Days</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Faculty</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="studentLeaveTable"></tbody>
+    </table>
+  </div>
+</body>
+</html>
